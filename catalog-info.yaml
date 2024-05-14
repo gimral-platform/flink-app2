@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flink-app-2
+  description: Flink Test application
+  labels:
+    component: flink
+spec:
+  type: flink-job
+  lifecycle: production
+  owner: guests
+  system: examples
+  # dependsOn:
+  #   - resource:default/service-a
+  consumesApis:
+    - flink-app-1-events

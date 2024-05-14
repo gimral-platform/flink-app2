@@ -1,0 +1,22 @@
+asyncapi: 3.0.0
+info:
+  title: Customer Events Consumer
+  version: 1.0.0
+  description: |-
+    Customer Events
+#Convert to reference '#/servers/kafka-dev'
+servers:
+  kafka-dev:
+    host: kafka-dev
+    protocol: kafka
+channels:
+  customer-updated:
+    $ref: './channels/customer-updated.yaml'
+operations:
+  onCustomerAddressUpdate:
+    action: 'send'
+    summary: Send customer updates
+    channel:
+      $ref: '#/channels/customer-updated'
+    # traits:
+    #   $ref: "#/components/operationTraits/kafka"

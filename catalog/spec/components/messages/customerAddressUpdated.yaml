@@ -1,0 +1,11 @@
+name: CustomerAddressUpdated
+contentType: application/json
+payload:
+  $ref: '../schemas/customerAddressUpdatedPayload.yaml'
+examples:
+  - name: CustomerAddressUpdated
+    summary: A simple CustomerAddressUpdated example message
+    payload:
+      id: 0
+      name: 'Customer A'
+      updatedOn: 182831283218
